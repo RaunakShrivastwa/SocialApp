@@ -7,11 +7,15 @@
             initial-scale=1.0,
             maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>http://localhost:9096/home</title>
+    <link rel = "icon" href =
+                "https://cdn-icons-png.flaticon.com/512/609/609803.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>(function (w, d) { w.CollectId = "642d19962f45336a3216484f"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async = true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
     <script>
         function App() {
             $(document).ready(function () {
@@ -19,8 +23,23 @@
             });
         }
     </script>
-
     <style>
+        p {
+        animation-duration: 3s;
+        animation-name: slidein;
+      }
+      
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 100%;
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
         body {
             background: url(https://www.cuchd.in/includes/assets/images/hero-slide-2.webp);
 
@@ -53,6 +72,7 @@
             background: linear-gradient(90deg, #1179EF 0%, rgba(17, 121, 239, 0.0001) 98.24%);
             color: black;
         }
+        
 
         .img {
             width: 80%;
@@ -83,7 +103,12 @@
             color: #393185;
             font-size: medium;
         }
-
+        .a1:hover{
+            background-color: #000000;color: wheat;box-shadow: 1px 0px 8px 0px rgb(110, 106, 106);
+            font-size: larger;
+            text-align: center;
+         
+        }
         @media only screen and (max-width: 990px) and (min-width: 770px) {
             .t-text {
                 font-size: x-small;
@@ -165,7 +190,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow sticky-top">
         <a class="navbar-brand" href="#">
             <img width="20px" src="https://www.cuchd.in/loader.gif" alt="">
         </a>
@@ -177,24 +202,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-primary" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-primary" href="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Registration</a>
+                    <a class="nav-link" href="/register">Registration</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                         aria-expanded="false">
                         Employee
                     </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Teacher</a>
-                        <a class="dropdown-item" href="#">Student</a>
+                    <div class="dropdown-menu" style="background: rgb(2,0,36);
+                    background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+                    rgba(209,15,183,1) 0%, rgba(153,0,255,1) 100%)">
+                        <a class="dropdown-item" href="/teacher">Teacher</a>
+                        <a class="dropdown-item" href="/student">Student</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Staff/Faculty</a>
+                        <a class="dropdown-item" href="/staff">Staff/Faculty</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -202,18 +229,41 @@
                         aria-expanded="false">
                         Course
                     </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">BCA</a>
-                        <a class="dropdown-item" href="#">MCA</a>
+                    <div class="dropdown-menu" style="background: rgb(2,0,36);
+                    background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+                    rgba(209,15,183,1) 0%, rgba(153,0,255,1) 100%)">
+                        <a class="dropdown-item" href="/bca">BCA</a>
+                        <a class="dropdown-item" href="/mca">MCA</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Certificates</a>
+                        <a class="dropdown-item" href="/certificate">Certificates</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Programm
+                    </a>
+                    <div class="dropdown-menu  justify-content-arround align-items-center" style="background: rgb(2,0,36);
+                    background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+                    rgba(209,15,183,1) 0%, rgba(153,0,255,1) 100%)">
+                       <div style="width: 300px;overflow: hidden;">
+                        <a class="dropdown-item a1 text-center" href="/java"><p style="font-size: large;">java</p></a>
+                        <a class="dropdown-item a1 text-center" style="font-size: large;" href="/c"><p style="font-size: large;">c</p></a>
+                        <a class="dropdown-item a1 text-center" style="font-size: large;" href="/c++"><p style="font-size: large;">c++</p></a>
+                        <a class="dropdown-item a1 text-center" style="font-size: large;" href="/web"><p style="font-size: large;">web fullStack</p></a>
+                        <a class="dropdown-item a1 text-center" style="font-size: large;" href="/javaBackend"><p style="font-size: large;">Backend with java</p></a>
+                        <a class="dropdown-item a1 text-center" style="font-size: large;" href="/dsa"><p style="font-size: large;">DSA through Java</p></a>
+                        <a class="dropdown-item a1 text-center" style="font-size: large;" href="/resume"><p style="font-size: large;">resume Building</p></a>
+                        <a class="dropdown-item a1 text-center" style="font-size: large;" href="/dataScience"><p style="font-size: large;">data science</p></a>
+                       
+                       </div>
+                       
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item a1 text-center" style="font-size: large;" href="/staff">Staff/Faculty</a>
+                    </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0" action="/loginPage" method="get">
                 <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit">Login</button>
             </form>
             <form class="form-inline my-2 my-lg-0">
@@ -222,7 +272,8 @@
             </form>
         </div>
     </nav>
-    <div class="d-flex text-center bg-danger" style="align-items: center;height: 900px;position: absolute;">
+    <!-- button -->
+    <div class="d-flex text-center bg-danger" style="align-items: center;height: 900px;position: absolute;z-index: 1;">
         <button class="btn btn-danger text-white h-auto rounded position-fixed" onclick=App()>
             <p>
                 E <br>
@@ -236,7 +287,7 @@
         </button>
 
     </div>
-
+<!-- toaste -->
     <div class="col-md-12  col-sm-12 d-flex mr-5 mt-5">
         <div class="toast toast1 position-fixed" style="z-index: 1;" data-autohide="false">
             <div class="toast-header" style="background-color: #393185;">
@@ -244,20 +295,21 @@
                 <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
             </div>
             <div class="toast-body">
-                <form >
+                <form action="/enquire" method="post">
                     <div class="form-group">
                         <label for="exampleInputEmail1">UserName</label>
-                        <input name="userName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input name="userName" type="text" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                             else.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Contact</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input name="contact" type="text" class="form-control" id="exampleInputPassword1">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -290,14 +342,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 mt-5">
+                <div class="col-md-6 col-sm-12 mt-5 p-4 rounded"  style="background-image:
+                linear-gradient(to right top, #00050b, #4ab1ec, #008793,
+                #000000, #1236eb);">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item"
-                            src="Top_5_Programming_Languages_In_2022__Best_Programming_Languages_To_Learn_In_2022__SimpliCode(720p).mp4"
+                            src="https://www.youtube.com/embed/bSsnjFzaNK8" title="YouTube video player"
                             allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="container mt-3 rounded">
+                <div class="container mt-3 rounded overflow-hidden">
                     <div class="row rounded">
                         <div class="col-md-4 col-sm-12 bg-white text-center" style="box-shadow:
                                 1px 0px 8px 0px
@@ -417,9 +471,8 @@
                     <h4 class="hg">The Parul University Advantage</h4>
                 </div>
 
-                <div class="col-md-12 col-sm-12 row mt-5 t-row ml-3 mr-1">
-                    <!-- <div class="col-md-3 col-sm-12 bg-dark">hallo</div> -->
-                    <div class="card img-1 p-0   col-md-3 col-sm-6 mr-3" style="border: #e4e7ec;">
+                <div class="col-md-12 col-sm-12 mt-5 ml-1 mr-1 text-center row">
+                    <div class="card img-1 p-0   col-md-4 col-sm-12 mr-4" style="border: #e4e7ec;">
                         <img src="https://paruluniversity.ac.in/bca_2023/images/Extensive%20practical%20learning.png"
                             class="card-img-top " alt="...">
                         <div class="card-body text-center">
@@ -427,17 +480,8 @@
                             <p class="card-text">for research & practical training</p>
                         </div>
                     </div>
-                    <!--  -->
-                    <div class="card p-0 img-1 p-0   col-md-3 col-sm-6 mr-3" style="border: #e4e7ec;">
-                        <img src="https://paruluniversity.ac.in/bca_2023/images/Enriching%20global%20exposure.png"
-                            class="card-img-top " alt="...">
-                        <div class="card-body  text-center">
-                            <p class="card-title font-weight-bold">Enriching Global Exposure</p>
-                            <p class="card-text">through student exchange programs</p>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="card img-1 p-0   col-md-2 col-sm-6 mr-3" style="border: #e4e7ec;">
+
+                    <div class="card img-1 p-0   col-md-3 col-sm-12 mr-4" style="border: #e4e7ec;">
                         <img src="https://paruluniversity.ac.in/bca_2023/images/Industry-centered%20curriculum.jpg"
                             class="card-img-top " alt="...">
                         <div class="card-body  text-center">
@@ -445,8 +489,8 @@
                             <p class="card-text">for curriculum development</p>
                         </div>
                     </div>
-                    <!--  -->
-                    <div class="card img-1 p-0   col-md-3 col-sm-6 mr-3" style="border: #e4e7ec;">
+
+                    <div class="card img-1 p-0   col-md-4 col-sm-12 " style="border: #e4e7ec;">
                         <img src="https://paruluniversity.ac.in/bca_2023/images/Supercomputer%20Facility.jpg"
                             class="card-img-top " alt="...">
                         <div class="card-body  text-center">
@@ -602,13 +646,188 @@
                         </div>
                     </div>
 
+                    <div class="toast toast2 col-md-4 col-sm-12 mr-2" data-autohide="false">
+                        <div class="toast-header">
+                            <strong class="mr-auto text-primary">Rcorded Lecture For Demo</strong>
+                            <small class="text-muted">5 mins ago</small>
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                        </div>
+                        <div class="toast-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/nDDRliaoswg"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Flexbox container for aligning the toasts -->
+                <!-- jQuery uses -->
+                <div class="row py-4 g-4 slider">
+                    <div class="col">
+                        <div class="card h-100 text-center border-0"
+                            style="font-size: 1.1rem; font-weight: 400;color: #393185;">
+                            <div class="card-body d-flex justify-content-center p-0">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Gaming%20Technology.png" alt="">
+                            </div>
+                            Gaming Technology
+                            <div class="card-body d-flex justify-content-center p-0 mt-4">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Web%20&%20Mobile%20Computing.png"
+                                    alt="">
+                            </div>
+                            Web & Mobile Computing
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center border-0"
+                            style="font-size: 1.1rem; font-weight: 400;color: #393185;">
+                            <div class="card-body d-flex justify-content-center p-0">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Cyber%20Security%20&%20Forensics.png"
+                                    alt="">
+                            </div>
+                            Cybe Security & Forensics
+                            <div class="card-body d-flex justify-content-center p-0 mt-4">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Web%20Technologies.png" alt="">
+                            </div>
+                            Web Technologies
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center border-0"
+                            style="font-size: 1.1rem; font-weight: 400;color: #393185;">
+                            <div class="card-body d-flex justify-content-center p-0">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Full%20Stack%20Web%20Development.png"
+                                    alt="">
+                            </div>
+                            Full Stack and Web Development
+                            <div class="card-body d-flex justify-content-center p-0 mt-4">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Big%20Data%20Analytics.png"
+                                    alt="">
+                            </div>
+                            Big Data Analytics
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center border-0"
+                            style="font-size: 1.1rem; font-weight: 400;color: #393185;">
+                            <div class="card-body d-flex justify-content-center p-0">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Cloud%20Computing.png" alt="">
+                            </div>
+                            Cloud Computing
+                            <div class="card-body d-flex justify-content-center p-0 mt-4">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Advanced%20Operating%20System.png"
+                                    alt="">
+                            </div>
+                            Advanced Operating System
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center border-0"
+                            style="font-size: 1.1rem; font-weight: 400;color: #393185;">
+                            <div class="card-body d-flex justify-content-center p-0">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Blockchain%20Technology.png"
+                                    alt="">
+                            </div>
+                            Blockchain Technology
+                            <div class="card-body d-flex justify-content-center p-0 mt-4">
+                                <img src="https://paruluniversity.ac.in/bca_2023/images/Artificial%20Intelligence.png"
+                                    alt="">
+                            </div>
+                            Artificial Intelligence
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Flexbox container for aligning the toasts -->
-
-
             </div>
+
         </div>
+        <section class="container-fluid p-0"
+            style="background-image: url('https://www.shutterstock.com/image-photo/radcliffe-quadrangle-the-quad-harvard-260nw-396023383.jpg'); background-size: cover;">
+            <div class="overlay text-white pt-3" style="background-color: rgba(0, 0, 0, .8);">
+
+                <div class="container-fluid py-4">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
+                        <div class="col">
+                            <div class="card border-0 h-100 bg-transparent">
+                                <div class="card-body text-center">
+                                    <div class="row g-2 ">
+                                        <div class="col-12">
+                                            <div class="card text-white bg-transparent text-center pt-2 border-2 border-bottom-0 border-start-0 border-top-0 border-white"
+                                                style="border-radius: 0%;">
+                                                <p style="font-size: 1.5rem;font-weight: 600;line-height: 0.8;">
+                                                    @Team_Shubham <br>
+                                                    <small class=" font-weight-lighter"
+                                                        style="font-size: 1rem;">Motihari,Bihar</small>
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col d-flex justify-content-center align-items-center">
+                            <div class="card h-100  bg-transparent text-white">
+                                <h3 style="font-weight: 500;">Developer Address</h3>
+                                <div style="line-height: 1.4;">
+                                    <p style="font-size: 1.2rem;">Chandmari, Motihari, East champaran, <br> Bihar 845401
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col d-flex justify-content-center align-items-center">
+                            <div class="card h-100 bg-transparent border-0 text-white">
+                                <h3 style="font-weight: 500;">Get in Touch With Us</h3>
+                                <div class="pt-2" style="line-height: 0.9;">
+                                    <a>
+                                        <small style="font-size: 1rem"><i class="fa fa-envelope text-white"></i>&nbsp;
+                                            codecprogramming@gmail.com</small>
+                                        <div class="col-md-12 mt-5 col-sm-6 d-flex">
+                                            <div class="col-md-3 col-sm-6">
+                                                <a href="https://www.facebook.com/shubham.shrivastwa.16">
+                                                    <i class="fa fa-facebook text-white-50"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-6 ">
+                                                <a href="https://www.linkedin.com/in/shubham-shrivastwa-8913a9229/">
+                                                    <i class="fa fa-linkedin text-white-50"></i>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6">
+                                                <a href="https://www.instagram.com/ks_shubham31/">
+                                                    <i class="fa fa-instagram text-white-50"></i>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6">
+                                                <a href="https://twitter.com/TeamShubham_">
+                                                    <i class="fa fa-twitter text-white-50"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h6 class="text-center py-4">© Copyright 2023. All Rights Reserved by Parul University.</h6>
+                    <div class="mt-5 text-center">
+                        <img style="width: 100px;" src="https://qr-codes-svg.s3.amazonaws.com/ObxrjR.svg?1680623393719"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <script>
         $(document).ready(function () {
