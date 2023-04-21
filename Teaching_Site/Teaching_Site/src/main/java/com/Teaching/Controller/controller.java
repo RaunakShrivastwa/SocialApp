@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class controller {
    @GetMapping("/home")
     public String Home(){
-        return "home";
+        return "/home";
     }
 
     @GetMapping("/about")
     public String About(){
-        return "about";
+        return "/about";
     } 
 
     @GetMapping("/bca")
@@ -84,7 +84,7 @@ public class controller {
     @PostMapping("/postData")
     public String postData(){
         
-        return "redirect:/register";
+        return "redirect:register";
     }
 
     @GetMapping("/access")

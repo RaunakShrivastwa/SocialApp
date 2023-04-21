@@ -19,7 +19,7 @@ public class StudentEnqiureController {
    @Autowired
    private StudentEnqiureService service;
 
-   @PostMapping("/enquire")
+   @GetMapping("/enquire")
     public String saveStudent(@RequestParam("userName") String userName,
                                       @RequestParam("email") String email,
                                       @RequestParam("contact") String contact){
@@ -30,13 +30,10 @@ public class StudentEnqiureController {
        enqiure.setEmail(email);
        enqiure.setContact(contact);
        this.service.saveStudent(enqiure);
+
        return "redirect:/home";
     
     }
 
-    @GetMapping("/enquire")
-    public List<StudentEnqiure> getAllStudent(){
-      return this.service.getAllStudent();
-    }
 
 }

@@ -15,18 +15,16 @@ import com.Teaching.service.CustomeuserDetailsService;
 
 import javax.sql.DataSource;
 
- @Configuration
+
+@Configuration
  @EnableWebSecurity
 public class webConfigFile extends WebSecurityConfigurerAdapter {
-
-    @Autowired
-    private DataSource dataSource;
-
     @Bean
     public UserDetailsService userDetailsService(){
         return new CustomeuserDetailsService();
     }
-
+     @Autowired
+     private DataSource dataSource;
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder(){
         return new BCryptPasswordEncoder();
@@ -49,6 +47,7 @@ public class webConfigFile extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http
+                .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/register","/java").hasRole("ADMIN")
                 .antMatchers("/about").hasRole("NORMAL")
