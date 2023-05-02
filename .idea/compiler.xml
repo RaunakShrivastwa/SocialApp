@@ -11,15 +11,22 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+<<<<<<< HEAD
       <module name="ChapterContent" target="17" />
       <module name="Content" target="17" />
       <module name="Employee" target="10" />
+=======
+      <module name="Employee" target="17" />
+>>>>>>> origin/master
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+<<<<<<< HEAD
       <module name="ChapterContent" options="-parameters" />
       <module name="Content" options="-parameters" />
+=======
+>>>>>>> origin/master
       <module name="Employee" options="-parameters" />
     </option>
   </component>
