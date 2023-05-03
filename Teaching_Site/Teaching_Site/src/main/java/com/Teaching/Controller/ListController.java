@@ -33,13 +33,13 @@ public class ListController {
         }).collect(Collectors.toList());
         model.addAttribute("userList",userList);
         model.addAttribute("name", name);
-        return "listData";
+        return "/JavaCourseDataContent/listData";
     }
 
     @GetMapping("/javaContent1")
     public String CourseContent(Model model){
           List<Course> courses=this.courseService.allCourse();
           model.addAttribute("course", courses);
-        return "Course";
+        return "/JavaCourseDataContent/Course";
     }
 }

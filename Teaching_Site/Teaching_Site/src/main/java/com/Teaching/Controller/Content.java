@@ -8,6 +8,6 @@ public class Content {
 
     @GetMapping("/javaContent")
     public String javaContent(){
-        return "javaContent";
+        return "/JavaCourseDataContent/JavaContent/javaContent";
     }
 }

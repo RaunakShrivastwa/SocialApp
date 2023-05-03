@@ -8,6 +8,6 @@ public class payController {
 
     @GetMapping("/payjava")
     public String payJava(){
-        return "payJava";
+        return "/JavaCourseDataContent/payJava";
     }
 }

@@ -8,55 +8,55 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class controller {
    @GetMapping("/home")
     public String Home(){
-        return "/home";
+        return "/HomePage/home";
     }
 
     @GetMapping("/about")
     public String About(){
-        return "/about";
+        return "/About/about";
     } 
 
     @GetMapping("/bca")
     public String Bca(){
-        return "bca";
+        return "/SpecialCertificatesCourse/bca";
     }
 
    @GetMapping("/mca")
     public String Mca(){
-        return "mca";
+        return "/SpecialCertificatesCourse/mca";
     }
 
     @GetMapping("/java")
     public String javaContent(){
-        return "java";
+        return "/Course/java";
     }
 
     @GetMapping("/c")
     public String c(){
-        return "c";
+        return "/Course/c";
     }
 
    @GetMapping("/c++")
     public String c1(){
-        return "c++";
+        return "/Course/c++";
     }
 
     
     @GetMapping("/dataScience")
     public String dataScience(){
-        return "dataScience";
+        return "/Course/dataScience";
     }
 
     
     @GetMapping("/dsa")
     public String dsa(){
-        return "dsa";
+        return "/Course/dsa";
     }
 
     
     @GetMapping("/javaBackend")
     public String javaBackend(){
-        return "javaBackend";
+        return "/JavaCourseDataContent/JavaAllContent/javaBackend";
     }
 
    
@@ -67,28 +67,28 @@ public class controller {
 
    @GetMapping("/web")
     public String web(){
-        return "web";
+        return "/Course/web";
     }
 
    @GetMapping("/loginPage")
     public String DoLogin(){
-        return "login";
+        return "/Login/login";
     }
 
     @GetMapping("/register")
     public String Registration(){
-        return "register";
+        return "/Registration/register";
     }
 
    
     @PostMapping("/postData")
     public String postData(){
         
-        return "redirect:register";
+        return "redirect:/Registration/register";
     }
 
     @GetMapping("/access")
     public String Denie(){
-        return "denied";
+        return "/Acess/denied";
     }
 }

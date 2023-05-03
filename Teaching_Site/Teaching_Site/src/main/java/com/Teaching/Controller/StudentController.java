@@ -47,7 +47,7 @@ public class StudentController {
               
 
                 this.service.saveStudent(student);
-                return "redirect:/register";
+                return "redirect:/Registration/register";
                            }
     
 }

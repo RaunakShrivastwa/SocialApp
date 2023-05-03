@@ -25,7 +25,7 @@ public class DataController {
         List<Chapter> userList=this.repositery.findByCourseName(link.getCourseName());
         model.addAttribute("userList", userList);
         model.addAttribute("link", link);
-        return "lec1";
+        return "/JavaCourseDataContent/javaContentListDashBord/lec1";
     }
 
     @GetMapping("/Decr/{id}")
@@ -42,7 +42,7 @@ public class DataController {
         List<Chapter> userList=this.repositery.findByCourseName(link.getCourseName());
         model.addAttribute("userList", userList);
         model.addAttribute("link", link);
-        return "lec1";
+        return "/JavaCourseDataContent/javaContentListDashBord/lec1";
         }
         
     }
@@ -54,6 +54,6 @@ public class DataController {
         List<Chapter> userList=this.repositery.findByCourseName(link.getCourseName());
         model.addAttribute("userList", userList);
         model.addAttribute("link", link);
-        return "lec1";
+        return "/JavaCourseDataContent/javaContentListDashBord/lec1";
     }
 }
